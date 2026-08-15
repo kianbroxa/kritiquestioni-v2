@@ -1,4 +1,4 @@
-const screen = document.getElementById("screen");
+﻿const screen = document.getElementById("screen");
 const progressFill = document.getElementById("progressFill");
 const confettiCanvas = document.getElementById("confettiCanvas");
 const ctx = confettiCanvas.getContext("2d");
@@ -25,7 +25,7 @@ const state = {
 };
 
 const reportItems = [
-  { title: "Localização registrada", subtitle: "Parque confirmado como cenário", status: "✓" },
+  { title: "Localização registrada", subtitle: "Museu Ipiranga confirmado como cenário", status: "✓" },
   { title: "Primeiro encontro detectado", subtitle: "Sessão inicial recuperada da memória", status: "✓" },
   { title: "Cinema analisado", subtitle: "Filme, reações e proximidade registrados", status: "✓" },
   { title: "Caminhada detectada", subtitle: "Percurso contínuo após o cinema", status: "✓" },
@@ -217,7 +217,7 @@ function renderHome() {
   wrap(`
     <div class="status-card">
       <span class="eyebrow">Version 2.0</span>
-      <h1 class="title title--red">Park Update</h1>
+      <h1 class="title title--red">Ipiranga Update</h1>
       <p class="subtitle">Uma nova sessão foi detectada.</p>
       <div class="actions">
         <button class="btn btn--green" data-action="start">▶ Iniciar análise</button>
@@ -320,7 +320,7 @@ function renderQuestion(index) {
         <h2 class="title title--red">Qual encontro você gostou mais?</h2>
         <div class="choice-grid">
           <button class="option-btn ${state.q1 === "Cinema" ? "is-selected" : ""}" data-action="choice" data-field="q1" data-value="Cinema">🎬 Cinema</button>
-          <button class="option-btn ${state.q1 === "Parque" ? "is-selected" : ""}" data-action="choice" data-field="q1" data-value="Parque">🌳 Parque</button>
+          <button class="option-btn ${state.q1 === "Museu Ipiranga" ? "is-selected" : ""}" data-action="choice" data-field="q1" data-value="Museu Ipiranga">🏛 museu ipiranga</button>
         </div>
         <div class="actions">
           <button class="btn btn--green" data-action="next">Próxima</button>
@@ -845,3 +845,4 @@ window.addEventListener("resize", resizeCanvas);
 
 resizeCanvas();
 renderBoot();
+
